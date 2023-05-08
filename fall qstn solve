@@ -1,0 +1,75 @@
+//Interface
+public interface Tossable {
+    void toss();
+}
+
+//class Ball
+public abstract class Ball implements Tossable{
+    private String BrandName;
+    public Ball(String B){
+        this.BrandName=B;
+    }
+    public  String getBrandName(){
+        return BrandName;
+    }
+    void Bounce(){
+        System.out.println("ball is bounced");
+    }
+    public void toss(){
+        System.out.println("toss happened");
+    }
+
+}
+
+//class Rock
+public abstract class Rock implements Tossable {
+    @Override
+    public void toss() {
+        System.out.println("toss happened");
+    }
+}
+
+//class Baseball
+public class Baseball extends Ball{
+    public Baseball(String B){
+        super(B);
+    }
+    public String Baseball() {
+        super.Bounce();
+        return null;
+    }
+
+    @Override
+    public void toss() {
+        System.out.println("toss happened");
+    }
+}
+
+//class Football
+public class Football extends Ball{
+    public Football(String F){
+        super(F);
+    }
+    public String Football() {
+        super.Bounce();
+        return null;
+    }
+
+    @Override
+    public void toss() {
+        System.out.println("toss happened");
+    }
+}
+
+//class Main
+public class Main {
+    public static void main(String[] args) {
+        Baseball b=new Baseball("give me the ball");
+        Football f= new Football("pass the ball");
+        b.toss();
+        b.Bounce();
+        f.toss();
+        f.Bounce();
+
+    }
+}
