@@ -1,0 +1,59 @@
+public abstract class Fruits {
+    String name;
+    public abstract void display();
+
+}
+//class Apple
+public class Apple extends Fruits{
+    String color;
+
+    @Override
+    public void display() {
+        System.out.println("Apple");
+    }
+    void color(){
+        System.out.println("red");
+    }
+}
+//class Banana
+public class Banana {
+    String color;
+
+
+    public void display() {
+        System.out.println("Banana");
+    }
+    void color(){
+        System.out.println("yellow");
+    }
+}
+//class Jackfruit
+public class Jackfruit {
+    String color;
+
+
+    public void display() {
+        System.out.println("Jackfruit");
+    }
+    void color(){
+        System.out.println("orange");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Apple a=new Apple();
+        a.color();
+        a.display();
+
+        Banana b= new Banana();
+        b.color();
+        b.display();
+
+        Jackfruit j=new Jackfruit();
+        j.color();
+        j.display();
+
+
+    }
+}
